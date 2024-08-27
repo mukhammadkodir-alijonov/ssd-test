@@ -1,0 +1,23 @@
+﻿@model ssd_task.Models.Employee
+
+@{
+    ViewBag.Title = "Edit Employee";
+}
+
+<h2>Edit Employee</h2>
+
+<form asp-action="Update" method="post">
+    <div class="form-group">
+        <label asp-for="Forenames" class="control-label"></label>
+        <input asp-for="Forenames" class="form-control" />
+        <span asp-validation-for="Forenames" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Surname" class="control-label"></label>
+        <input asp-for="Surname" class="form-control" />
+        <span asp-validation-for="Surname" class="text-danger"></span>
+    </div>
+    <!-- Add other fields similarly -->
+    <input type="hidden" asp-for="Personnel_Records" />
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
